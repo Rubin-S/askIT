@@ -14,9 +14,9 @@ function App() {
 
 	const handleSegmentChange = (segment) => {
 		if (activeSegment === segment) {
-			setActiveSegment(null) // Close the popup if the same segment is clicked
+			setActiveSegment(null) 
 		} else {
-			setActiveSegment(segment) // Open the popup for the clicked segment
+			setActiveSegment(segment) 
 		}
 	}
 
