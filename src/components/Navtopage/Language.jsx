@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './Language.css'
+import './styles/Language.css'
 
 const Language = () => {
 	const languages = [

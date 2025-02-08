@@ -1,0 +1,14 @@
+{
+    "name": "Kathir",
+    "profession": "Carpenter",
+    "experience": "5",
+    "skills": "5",
+    "location": "Gandhipuram, R.S. Puram, Saibaba Colony",
+    "availableDays": ["Sunday", "Wednesday", "Friday", "Saturday"],
+    "rating": "4.8",
+    "reviews": "10000",
+    "price": "₹1500/Hour",
+    "postedDate": "12-12-2023",
+    "profilePicture": "https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-image-182145777.jpg"
+  }
+  

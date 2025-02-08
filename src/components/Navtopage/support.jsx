@@ -1,5 +1,5 @@
 import React from 'react'
-import './support.css'
+import './styles/support.css'
 const Support = () => {
   return (
     <div className="header-user-help">

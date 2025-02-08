@@ -11,3 +11,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h1 {
+  font-size: 3rem;
+}
+
+/* Medium Screens (Tablets) */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Small Screens (Phones) */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+}
