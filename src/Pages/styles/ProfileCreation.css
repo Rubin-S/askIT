@@ -1,0 +1,161 @@
+/* Define CSS variables */
+:root {
+    --profilePic-background-color: #ffffff;
+    --profilePic-border-radius: 20px;
+    --profilePic-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    --profilePic-font-family: 'Arial', sans-serif;
+    --profilePic-title-color: #000000;
+    --profilePic-subtitle-color: #666666;
+    --profilePic-button-bg: #ffffff;
+    --profilePic-button-border: 1px solid #cccccc;
+    --profilePic-button-border-radius: 25px;
+    --profilePic-button-text-color: #000000;
+    --profilePic-button-hover-bg: #f5f5f5;
+    --profilePic-image-size: 120px;
+    --profilePic-choose-btn-bg: #ffffff;
+    --profilePic-choose-btn-border: 1px solid #000000;
+    --profilePic-continue-btn-bg: #000000;
+    --profilePic-continue-btn-text-color: #ffffff;
+    --profilePic-back-icon-size: 20px;
+}
+
+/* Center the profile creation card on the page */
+.profilePic-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #ffffff;
+    font-family: var(--profilePic-font-family);
+    padding-top: 10%;
+    padding-left: 25%;
+    padding-right: 40%;
+}
+
+/* Style the profile creation card */
+.profilePic-card {
+    background-color: var(--profilePic-background-color);
+    border-radius: var(--profilePic-border-radius);
+    box-shadow: var(--profilePic-box-shadow);
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+/* Back button styling */
+.profilePic-back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.profilePic-back-icon {
+    width: var(--profilePic-back-icon-size);
+    height: var(--profilePic-back-icon-size);
+}
+
+/* Title styling */
+.profilePic-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--profilePic-title-color);
+    margin-bottom: 10px;
+}
+
+/* Subtitle styling */
+.profilePic-subtitle {
+    font-size: 16px;
+    color: var(--profilePic-subtitle-color);
+    margin-bottom: 30px;
+}
+
+/* Profile picture section styling */
+.profilePic-picture-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.profilePic-picture-section img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.profilePic-image {
+    width: var(--profilePic-image-size);
+    height: var(--profilePic-image-size);
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Choose Image button styling */
+.profilePic-choose-btn {
+    width: 150px;
+    padding: 10px;
+    background-color: var(--profilePic-choose-btn-bg);
+    border: var(--profilePic-choose-btn-border);
+    border-radius: var(--profilePic-button-border-radius);
+    font-size: 14px;
+    color: var(--profilePic-button-text-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.profilePic-choose-btn:hover {
+    background-color: var(--profilePic-button-hover-bg);
+}
+
+/* Default text styling */
+.profilePic-default-text {
+    font-size: 14px;
+    color: var(--profilePic-subtitle-color);
+}
+
+/* Button group styling */
+.profilePic-button-group {
+    display: flex;
+    gap: 15px;
+    justify-content: space-around;
+}
+
+/* Continue Without Image button styling */
+.profilePic-continue-without-btn {
+    width: 180px;
+    padding: 8px;
+    background-color: var(--profilePic-button-bg);
+    border: var(--profilePic-button-border);
+    border-radius: var(--profilePic-button-border-radius);
+    font-size: 12px;
+    color: var(--profilePic-button-text-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.profilePic-continue-without-btn:hover {
+    background-color: var(--profilePic-button-hover-bg);
+}
+
+/* Continue button styling */
+.profilePic-continue-btn {
+    width: 120px;
+    padding: 8px;
+    background-color: var(--profilePic-continue-btn-bg);
+    color: var(--profilePic-continue-btn-text-color);
+    border: none;
+    border-radius: var(--profilePic-button-border-radius);
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.profilePic-continue-btn:hover {
+    background-color: #333333;
+}

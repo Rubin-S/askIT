@@ -5,20 +5,22 @@ import Home from "./Pages/Home.jsx";
 import Search from "./Pages/Search-Filter.jsx";
 import Signup from "./Pages/Signup.jsx";
 import Dashboard from "./Pages/Dashboard.jsx";
-import ProfileSetup from "./Pages/ProfileSetup.jsx";
+import Verify from "./Pages/Verify.jsx";
 import Footer from "./components/Home/HomeFooter";
+import ProfileCreation from './Pages/ProfileCreation.jsx';
 
 const App = () => {
   return (
+    
     <Router>
       <NavBar />   
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Search" element={<Search />} />
         <Route path="/Provider-Signup" element={<Signup />} />
-        <Route path="/Consumer-Signup" element={<ProfileSetup />} />
+        <Route path="/Consumer-Signup" element={<Verify />} />
         <Route path="/Dashboard" element={<Dashboard/>} />
-        <Route path="/Dashboard" element={<Dashboard/>} />
+        <Route path="/ProfileCreation" element={<ProfileCreation />} />
       </Routes>
       <Footer />  
     </Router>

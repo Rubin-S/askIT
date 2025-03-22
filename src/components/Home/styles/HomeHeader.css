@@ -1,9 +1,8 @@
 .home-hero {
-    margin: 100px;
-    padding: 50px;
-    background: url('') no-repeat center center;
+    padding: 150px;
+    background: url('https://media.gettyimages.com/id/1165313649/photo/car-mechanic-handshakes-customer.jpg?s=1024x1024&w=gi&k=20&c=WXeonCLZK1k6598R1eyKsVT44gi3HceqwLcrzuD0kSw=') no-repeat center center;
     background-size: cover;
-    color: #000000;
+    color: #ffffff;
   }
   
   .home-learn-about {

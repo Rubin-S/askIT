@@ -44,7 +44,6 @@ body {
   }
   
 
-  button,
   .input2-custom-file-button {
     background-color: black;
     color: greenyellow;
@@ -57,7 +56,6 @@ body {
     transition: all 0.3s ease;
   }
   
-  button:hover,
   .input2-custom-file-button:hover {
     background-color: green;
     color: white;

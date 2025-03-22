@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
+import cardImage from "../../assets/images/card1.png";
 import "./styles/HomeServiceCards.css";
 
 const ServiceCards = () => {
@@ -15,6 +16,7 @@ const ServiceCards = () => {
         <div className="home-card-bottom">
             <button className="home-btn" onClick={() => navigate("/Provider-Signup")}>Get Started ↗</button>
             <div className="home-card-image">
+              <img src={cardImage} alt="Post Service" />
             </div>
         </div>
       </div>
@@ -26,7 +28,7 @@ const ServiceCards = () => {
         <div className="home-card-bottom">
             <button className="home-btn" onClick={() => navigate("/Consumer-Signup")}>Get Started ↗</button>
             <div className="home-card-image">
-                <img src="home-find-service-image.png" alt="Find Service" />
+                <img src={cardImage} alt="Find Service" />
             </div>
         </div>
       </div>

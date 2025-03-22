@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Card } from "../components/Search/card";
 import "./styles/Search-Filter.css";
+import Login from '../components/Navtopage/Login';
 
 export const Filter = () => {
   const mockData = [
@@ -127,6 +128,7 @@ export const Filter = () => {
   ];
 
   const [search, setSearch] = useState("");
+  const [showLogin, setShowLogin] = useState(false);
   const [location, setLocation] = useState("");
   const [isVerified, setIsVerified] = useState(null); // null = no filter, true = verified, false = unverified
   const [filteredData, setFilteredData] = useState(mockData);
@@ -174,8 +176,21 @@ export const Filter = () => {
     setIsVerified(null); 
   };
 
+
+      const handleVerification = () => {
+            setShowLogin(true);
+    }
+
   return (
     <div className="container">
+
+                {showLogin && (
+                  <div className="verify-popup-overlay">
+                  <Login
+                      onClose={() => setShowLogin(false)}
+                   />
+                  </div>
+              )}
       <div className="user-filter-container">
         <div className="user-container">
           <h1 className="user-search-filter">Filters</h1>
@@ -203,7 +218,7 @@ export const Filter = () => {
                 ))}
               </select>
             </div>
-            <div className="user-search-ele3">
+            <div className="user-search-ele3" >
               <input
                 type="radio"
                 id="verified"
@@ -223,7 +238,7 @@ export const Filter = () => {
         </div>
 
         {/* Render filtered data */}
-        <div className="user-results">
+        <div className="user-results" onClick={handleVerification}>
           {filteredData.length > 0 ? (
             filteredData.map((item, index) => <Card key={index} data={item} />)
           ) : (

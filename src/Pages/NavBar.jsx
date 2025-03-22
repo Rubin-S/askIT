@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import './styles/NavBar.css';
 import { IoSearch } from 'react-icons/io5';
@@ -9,10 +9,14 @@ import { AiOutlineGlobal } from 'react-icons/ai';
 import { CiCirclePlus } from 'react-icons/ci';
 
 import Support from '../components/Navtopage/support';
+import Login from '../components/Navtopage/Login';
 import Notification from '../components/Navtopage/Notification';
 import Language from '../components/Navtopage/Language';
 
 function NavBar() {
+  const [showLogin, setShowLogin] = useState(false);
+  const [mail, setMail] = useState('');
+  const location = useLocation();
   const [activeSegment, setActiveSegment] = useState(null);
   const navigate = useNavigate();
 
@@ -20,12 +24,22 @@ function NavBar() {
     setActiveSegment(activeSegment === segment ? null : segment);
   };
 
+
+  const handleLoginStatus = (status) => {
+    setMail(status);
+      setShowLogin(false); 
+  };
+
+      const handleVerification = () => {
+            setShowLogin(true);
+    }
+
   return (
     <div className="header-navbar">
       <div className="header-navbar-left">
         <h1 className="header-logo"><Link to="/">AskIT</Link></h1>
       </div>
-
+      {location.pathname !== "/" && (
       <div className="header-navbar-center">
         <div className="header-search-wrapper">
           <div className="header-locat">
@@ -44,6 +58,7 @@ function NavBar() {
           </div>
         </div>
       </div>
+       )}
 
       <div className="header-navbar-right">
         {[
@@ -66,15 +81,6 @@ function NavBar() {
             ),
             component: <Language />,
           },
-          {
-            id: 'signin',
-            label: (
-              <>
-                <CiCirclePlus /> Sign in
-              </>
-            ),
-            component: <div className="header-popup-box">Sign in Info Here</div>,
-          },
         ].map(({ id, label, component }) => (
           <div key={id} className={`header-nav-item ${activeSegment === id ? 'active' : ''}`}>
             <a onClick={() => handleSegmentChange(id)} href={`#${id}`}>
@@ -83,6 +89,18 @@ function NavBar() {
             {activeSegment === id && <div className="header-popup-box">{component}</div>}
           </div>
         ))}
+
+              <p className='header-nav-item' onClick={handleVerification}>
+                <CiCirclePlus /> Login
+              </p>
+
+              {showLogin && (
+                  <div className="verify-popup-overlay">
+                  <Login
+                      onClose={() => setShowLogin(false)}
+                   />
+                  </div>
+              )}
 
         <button className="header-sign-up" onClick={() => navigate("/Consumer-Signup")}>Sign up</button>
       </div>

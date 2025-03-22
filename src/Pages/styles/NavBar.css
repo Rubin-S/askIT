@@ -1,13 +1,16 @@
 .header-navbar {
+	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 10px 10px;
-	padding: 15px 1.5%;
+	padding-left: 10px;
+	padding-right: 10px;
 	background: #121212;
 	color: #fff;
 	font-family: Arial, sans-serif;
-	position: relative;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
 }
 
 .header-nav-item {
