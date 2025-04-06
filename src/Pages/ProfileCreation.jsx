@@ -15,7 +15,7 @@ const ProfileCreation = ({ onBack }) => {
           <div>
             <h2 className="profilePic-picture-title">Add a profile picture</h2>
             <img
-              src="default-profile.jpg" // Replace with your default profile image
+              src="default-profile.jpg" 
               alt="Profile"
               className="profilePic-image"
             />
